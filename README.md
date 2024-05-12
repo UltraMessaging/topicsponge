@@ -10,7 +10,11 @@ Example code to log discovered sources and their source strings.
 &bull; [Copyright And License](#copyright-and-license)  
 &bull; [Repository](#repository)  
 &bull; [Introduction](#introduction)  
-&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Configuring Topicsponge](#configuring-topicsponge)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Start Topicsponge First](#start-topicsponge-first)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Multiple TRDs](#multiple-trds)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [SRS](#srs)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Limitations](#limitations)  
+&bull; [Configuring Topicsponge](#configuring-topicsponge)  
 <!-- TOC created by '/home/sford/bin/mdtoc.pl README.md' (see https://github.com/fordsfords/mdtoc) -->
 <!-- mdtoc-end -->
 
@@ -56,6 +60,8 @@ callback to discover sources via topic resolution source advertisements.
 The topicsponge program is intentionally written very simply to make it
 easy to be customized for a user's environment.
 
+## Start Topicsponge First
+
 Depending on your applications' configurations,
 UM can stop advertising sources after a time.
 To get a complete list of sources,
@@ -63,12 +69,7 @@ you'll have to start the topicsponge before the publishers are started.
 Ideally the topicsponge would be running continuously any time
 applications are running.
 
-Note that topicsponge does not detect when a source is deleted or
-if the publisher exits.
-It cannot monitor for EOS or detect timeouts.
-However,
-[automatic monitoring](https://ultramessaging.github.io/currdoc/doc/Operations/monitoring.html#automaticmonitoring)
-can monitor the liveness of transport sessions.
+## Multiple TRDs
 
 In a network that has multiple
 [topic resolution domains](https://ultramessaging.github.io/currdoc/doc/Design/fundamentalconcepts.html#topicresolutiondomain)
@@ -81,10 +82,21 @@ subscribers.
 To get a complete picture of a UM network's sources,
 you should run a topicsponge in every TRD in the network.
 
+## SRS
+
 In a TRD that is serviced by an SRS,
 the topicsponge should be configured with
 [resolver_service_interest_mode (context)](https://ultramessaging.github.io/currdoc/doc/Config/grptcpbasedresolveroperation.html#resolverserviceinterestmodecontext)
 set to "flood".
+
+## Limitations
+
+Note that topicsponge does not detect when a source is deleted or
+if the publisher exits.
+It cannot monitor for EOS or detect timeouts.
+However,
+[automatic monitoring](https://ultramessaging.github.io/currdoc/doc/Operations/monitoring.html#automaticmonitoring)
+can monitor the liveness of transport sessions.
 
 # Configuring Topicsponge
 
