@@ -56,6 +56,13 @@ you'll have to start the topicsponge before the publishers are started.
 Ideally the topicsponge would be running continuously any time
 applications are running.
 
+Note that topicsponge does not detect when a source is deleted or
+if the publisher exits.
+It cannot monitor for EOS or detect timeouts.
+However,
+[automatic monitoring](https://ultramessaging.github.io/currdoc/doc/Operations/monitoring.html#automaticmonitoring)
+can monitor the liveness of transport sessions.
+
 In a network that has multiple
 [topic resolution domains](https://ultramessaging.github.io/currdoc/doc/Design/fundamentalconcepts.html#topicresolutiondomain)
 connected via DROs,
