@@ -83,10 +83,10 @@ you should run a topicsponge in every TRD in the network.
 
 In a TRD that is serviced by an SRS,
 the topicsponge should be configured with
-[esolver_service_interest_mode (context)](https://ultramessaging.github.io/currdoc/doc/Config/grptcpbasedresolveroperation.html#resolverserviceinterestmodecontext)
+[resolver_service_interest_mode (context)](https://ultramessaging.github.io/currdoc/doc/Config/grptcpbasedresolveroperation.html#resolverserviceinterestmodecontext)
 set to "flood".
 
-## Configuring Topicsponge
+# Configuring Topicsponge
 
 In the interest of keeping the topicsponge's code simple,
 it does not load a configuration file.

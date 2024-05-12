@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<um-configuration version="1.0">
+  <templates>
+    <template name="mytemplate">
+      <!-- Put your application configurations here. -->
+      <options type="context">
+        <option name="resolver_service" default-value="172.27.134.191:12601"/>
+        <option name="resolver_disable_udp_topic_resolution" default-value="1"/>
+        <option name="default_interface" default-value="172.27.134.191/24"/>
+        <option name="mim_incoming_address" default-value="0.0.0.0"/>
+        <option name="fd_management_type" default-value="epoll"/>
+        <option name="request_tcp_reuseaddr" default-value="1"/>
+      </options>
+      <options type="source">
+        <option name="implicit_batching_minimum_length" default-value="1"/>
+      </options>
+    </template>
+  </templates>
+
+  <applications>
+    <application name="topicsponge" template="mytemplate">
+      <!-- User application. -->
+      <contexts>
+        <context>
+          <options type="context">
+            <option name="resolver_service_interest_mode" default-value="flood"/>
+          </options>
+        </context>
+      </contexts>
+    </application>
+
+    <application name="lbmsrc" template="mytemplate">
+      <!-- User application. -->
+      <contexts>
+        <context>
+          <sources>
+          </sources>
+        </context>
+      </contexts>
+    </application>
+
+  </applications>
+</um-configuration>

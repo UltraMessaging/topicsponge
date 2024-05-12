@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<um-srs version="1.0">
+  <daemon>
+    <log type="console"/>
+    <pid-file>srs.pid</pid-file>
+  </daemon>
+  <srs>
+    <interface>172.27.134.191</interface>
+    <port>12601</port>
+    <application-id>srs1</application-id>
+  </srs>
+</um-srs>
