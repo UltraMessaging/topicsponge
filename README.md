@@ -5,6 +5,13 @@ Example code to log discovered sources and their source strings.
 # Table of contents
 
 <!-- mdtoc-start -->
+&bull; [topicsponge](#topicsponge)  
+&bull; [Table of contents](#table-of-contents)  
+&bull; [Copyright And License](#copyright-and-license)  
+&bull; [Repository](#repository)  
+&bull; [Introduction](#introduction)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Configuring Topicsponge](#configuring-topicsponge)  
+<!-- TOC created by '/home/sford/bin/mdtoc.pl README.md' (see https://github.com/fordsfords/mdtoc) -->
 <!-- mdtoc-end -->
 
 # Copyright And License
